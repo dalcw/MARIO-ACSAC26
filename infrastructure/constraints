@@ -1,0 +1,7 @@
+# Infrastructure Constraints
+
+- No author-operated private infrastructure is required.
+- Run one experiment process on one CUDA-capable GPU.
+- Checkpoint-based Claims 1-5 support approximately 24 GB of GPU memory with the documented default batches.
+- CPU execution is supported by PyTorch but is impractical for the full evaluations.
+- Allow approximately 20 GB of free disk space, excluding datasets and downloaded checkpoint archives.

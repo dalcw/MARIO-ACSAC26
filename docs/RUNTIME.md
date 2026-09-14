@@ -45,7 +45,7 @@
 Every `run.sh` accepts a `--batch-size` argument. For example:
 
 ```bash
-./experiments/[experiment name]/run.sh --batch-size 16
+./claims/claimN/run.sh --batch-size 16
 ```
 
 Replace `[experiment name]` with the target experiment directory. If the process still runs out of memory, halve the value again until it fits. This changes memory use and execution time without reducing the evaluation dataset. Experiments 3 and 5 include stochastic optimization, so their exact values may vary slightly when the batch size changes.

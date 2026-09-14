@@ -1,12 +1,12 @@
 # Dataset Preparation
 
-Datasets are placed under `data/` by default. Use `--data-root /path/to/data` to select another dataset root.
+Datasets are placed under `artifact/data/` by default. Use `--data-root /path/to/data` to select another dataset root.
 
 ## CIFAR-10
 
 - **Official page:** [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
 - **Download:** automatic through torchvision
-- **Path:** `data/cifar-10-batches-py/`
+- **Path:** `artifact/data/cifar-10-batches-py/`
 
 No manual preparation is required. The experiment scripts enable `--download-cifar10`.
 
@@ -18,7 +18,7 @@ No manual preparation is required. The experiment scripts enable `--download-cif
 Extract the prepared Kaggle package into this layout:
 
 ```text
-data/celeba/
+artifact/data/celeba/
 |-- img_align_celeba/
 |   `-- *.jpg
 |-- list_attr_celeba.csv
@@ -37,7 +37,7 @@ All JPG files must be placed directly under `img_align_celeba/`.
 The prepared Kaggle package is used to avoid repeating image resizing. Arrange the files as follows:
 
 ```text
-data/nih_chest_xray/
+artifact/data/nih_chest_xray/
 |-- images-224/
 |   `-- *.png
 |-- Data_Entry_2017.csv

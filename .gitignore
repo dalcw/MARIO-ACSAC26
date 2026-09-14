@@ -4,7 +4,7 @@ __pycache__/
 .DS_Store
 
 # Local datasets (CIFAR-10, CelebA, and NIH Chest X-ray)
-/data/
+/artifact/data/
 
 # Generated experiment artifacts at any directory depth
 generated_results/
@@ -21,8 +21,9 @@ events.out.tfevents.*
 *.log
 
 # Local checkpoint staging and cloud-upload archives
-/checkpoints/raw/
-/checkpoint_archives/
+/artifact/checkpoints/raw/
+/artifact/checkpoint_archives/
+/claims/*/results/
 *.pt
 *.pth
 *.ckpt

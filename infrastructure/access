@@ -1,0 +1,5 @@
+# Infrastructure Access
+
+No private machines, cloud allocations, accounts, or API credentials are supplied by the authors.
+
+Evaluators run the artifact on their own compatible Linux and CUDA environment.
