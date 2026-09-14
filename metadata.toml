@@ -10,9 +10,9 @@ citation = '''
 '''
 license_url = "https://polyformproject.org/licenses/noncommercial/1.0.0"
 infrastructure_constraints = "Checkpoint-based evaluation uses memory-conscious batches suitable for a CUDA GPU with approximately 24 GB of device memory. Reference runs were validated on a 96 GB GPU. Scratch training may require smaller batches or additional memory. No public cloud allocation is bundled with the artifact."
-infrastructure_access = ""
+infrastructure_access = "Checkpoint-based evaluation requires approximately 24 GB of GPU memory, which may not be consistently available in common public environments. Password-based SSH access to an isolated evaluation server can be provided through ACSAC HotCRP if needed."
 install_script = "https://github.com/dalcw/MARIO/blob/main/install.sh"
-use = "Research artifact for evaluating representation exposure controls in split learning. It is not a production privacy guarantee or a substitute for formal privacy analysis."
+use = "Research artifact for reproducing and extending representation-exposure control experiments in split learning under the datasets, models, attacks, checkpoints, and hyperparameters documented in the paper and repository."
 destructive = "The scripts only download public datasets and write checkpoints, CSV files, and figures under artifact/data, artifact/runs, artifact/generated_results, and claims/claimN/results."
 claim1 = "MARIO lowers supervised reconstruction fidelity while retaining competitive task accuracy."
 script1 = "https://github.com/dalcw/MARIO/blob/main/claims/claim1/run.sh"

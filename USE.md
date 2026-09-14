@@ -1,15 +1,15 @@
 # Intended Use
 
-MARIO is released as a research artifact for representation-exposure control in split learning.
+MARIO is a research artifact for reproducing and extending representation-exposure control experiments in split learning.
 
 ## Intended Uses
 
 - Reproduce the claims and measurements reported in the MARIO paper.
-- Study reconstruction and property-inference leakage from intermediate representations.
-- Extend the implementation for noncommercial research, education, and evaluation.
+- Evaluate task utility, reconstruction leakage, and property-inference leakage under the documented protocols.
+- Study and extend MARIO for noncommercial research, education, and comparative evaluation.
 
-## Limitations
+## Evaluation Scope
 
-- Reported privacy results are empirical measurements under the documented attacks and settings.
-- This artifact does not provide a formal privacy guarantee and is not a production security product.
+- The released results correspond to the datasets, model architectures, attack models, checkpoints, and hyperparameters documented in the paper and this repository.
+- Applying MARIO to other datasets, architectures, or threat models requires evaluation under the corresponding experimental conditions.
 - Third-party datasets and dependencies remain subject to their own licenses and access terms.
