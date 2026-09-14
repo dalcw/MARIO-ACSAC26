@@ -12,9 +12,6 @@ cd ~/MARIO
 conda activate mario
 ```
 
-When using the provided server, skip the Setup, Checkpoints, and Datasets
-sections and proceed directly to [Artifact Evaluation](#artifact-evaluation).
-
 See [Infrastructure Access](infrastructure/access.md) for the server workflow.
 
 ---

@@ -42,6 +42,5 @@ conda activate mario
 
 All required datasets and release checkpoints are preloaded. Evaluators
 do not need sudo access and do not need to install or download additional
-files. Skip the repository Setup, Checkpoints, and Datasets sections and run
-each claim script as described in the
+files. Run each claim script as described in the
 [Artifact Evaluation section](../README.md#artifact-evaluation).
