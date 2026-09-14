@@ -1,0 +1,13 @@
+dataset,method,samples,property_1,property_1_accuracy,property_2,property_2_accuracy
+celeba,Vanilla,39829,male,0.9664,young,0.8484
+celeba,Noise,39829,male,0.7908,young,0.7605
+celeba,NoPeek,39829,male,0.9378,young,0.7993
+celeba,R3eLU,39829,male,0.8889,young,0.8043
+celeba,DISCO,39829,male,0.9016,young,0.8023
+celeba,MARIO,39829,male,0.5939,young,0.7518
+nih_chest_xray,Vanilla,25596,gender,0.9362,age,0.7117
+nih_chest_xray,Noise,25596,gender,0.7317,age,0.6297
+nih_chest_xray,NoPeek,25596,gender,0.5814,age,0.5273
+nih_chest_xray,R3eLU,25596,gender,0.8197,age,0.7165
+nih_chest_xray,DISCO,25596,gender,0.6819,age,0.6534
+nih_chest_xray,MARIO,25596,gender,0.5684,age,0.5314

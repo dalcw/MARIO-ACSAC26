@@ -1,0 +1,60 @@
+{
+  "format_version": 1,
+  "note": "Unused, forward-unreachable tensors were removed from historical ablation checkpoints.",
+  "files": [
+    {
+      "variant": "channel_obfuscation_only",
+      "path": "channel_obfuscation_only/model.pt",
+      "size_bytes": 57108515,
+      "sha256": "fb00a1956b435e910686f51ce7f6691b2887dd505a9b1bc7eb1a4f22abfba38b"
+    },
+    {
+      "variant": "channel_obfuscation_only",
+      "path": "channel_obfuscation_only/reconstruction_attacker.pt",
+      "size_bytes": 3551205,
+      "sha256": "5e341b6c1661488c6826596197aef2cd0df3bc2b28d41d3bd03cba07b23c5841"
+    },
+    {
+      "variant": "channel_obfuscation_only",
+      "path": "channel_obfuscation_only/property_attacker.pt",
+      "size_bytes": 4148663,
+      "sha256": "806412cf3dd8c5e672d437f043c6ce91c29bdbd484435b9467a232019f3255a9"
+    },
+    {
+      "variant": "latent_decomposition_only",
+      "path": "latent_decomposition_only/model.pt",
+      "size_bytes": 86628123,
+      "sha256": "e8496aebe1e6bd46ffd4269cdba1de0dafadf60ad09bc7f83e013f2a4be66c7d"
+    },
+    {
+      "variant": "latent_decomposition_only",
+      "path": "latent_decomposition_only/reconstruction_attacker.pt",
+      "size_bytes": 3551205,
+      "sha256": "f15d594a93335ca3089de9f906b2eb49aa38e9cabcc5faef69fea1e45213234a"
+    },
+    {
+      "variant": "latent_decomposition_only",
+      "path": "latent_decomposition_only/property_attacker.pt",
+      "size_bytes": 4148663,
+      "sha256": "a38f970a49d4301a97c1d48aee6bd7df0978c1cad334df9f9db87882a2cd9636"
+    },
+    {
+      "variant": "variational_sampling_only",
+      "path": "variational_sampling_only/model.pt",
+      "size_bytes": 49721787,
+      "sha256": "6b084ded502e1d3898e4f3041bd4ad4366352b060fe5253a244ec926e6d8e598"
+    },
+    {
+      "variant": "variational_sampling_only",
+      "path": "variational_sampling_only/reconstruction_attacker.pt",
+      "size_bytes": 3551205,
+      "sha256": "40de8dea175177e5c016a5f0dc42987b90647f77a5485c7e7316097e829aca46"
+    },
+    {
+      "variant": "variational_sampling_only",
+      "path": "variational_sampling_only/property_attacker.pt",
+      "size_bytes": 4148663,
+      "sha256": "c5dba9b8d4b4ff77e9676f8638054e795666307898f43292f74c3cb6dc18e3d1"
+    }
+  ]
+}

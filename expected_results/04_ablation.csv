@@ -1,0 +1,6 @@
+variant,task_accuracy,reconstruction_lpips,property_inference_accuracy
+Vanilla,0.916,0.18,0.96
+Channel obfuscation only,0.912,0.61,0.83
+Latent decomposition only,0.922,0.63,0.59
+Variational sampling only,0.915,0.52,0.95
+MARIO,0.926,0.67,0.59

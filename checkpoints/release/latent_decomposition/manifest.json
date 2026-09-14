@@ -1,0 +1,11 @@
+{
+  "format_version": 1,
+  "description": "Weights-only CIFAR-10 latent-decomposition checkpoint.",
+  "files": [
+    {
+      "path": "cifar10/decomposition.pt",
+      "size_bytes": 1559266229,
+      "sha256": "efce24dee3d927541429f018c2b7f0018bd5badb237854eaf189ca245bb4e373"
+    }
+  ]
+}

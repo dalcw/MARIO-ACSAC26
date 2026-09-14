@@ -1,0 +1,28 @@
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.DS_Store
+
+# Local datasets (CIFAR-10, CelebA, and NIH Chest X-ray)
+/data/
+
+# Generated experiment artifacts at any directory depth
+generated_results/
+results/
+result/
+runs/
+outputs/
+output/
+logs/
+wandb/
+lightning_logs/
+tensorboard/
+events.out.tfevents.*
+*.log
+
+# Local checkpoint staging and cloud-upload archives
+/checkpoints/raw/
+/checkpoint_archives/
+*.pt
+*.pth
+*.ckpt

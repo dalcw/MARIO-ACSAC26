@@ -1,0 +1,3 @@
+representation,test_samples,decoder_epochs,psnr,ssim,lpips
+z_priv,500,50,14.81,0.26,0.25
+z_pub,500,50,13.88,0.22,0.50
