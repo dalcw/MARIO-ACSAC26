@@ -46,6 +46,8 @@ SSH connection information and a temporary password for the preconfigured artifa
 |   |-- RUNTIME.md
 |   `-- TRAINING.md
 |-- infrastructure/
+|   |-- access.md
+|   `-- constraints.md
 |-- LICENSE.md
 |-- README.md
 |-- USE.md
