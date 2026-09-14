@@ -1,6 +1,8 @@
 # *MARIO*: Multi-stage Adapter for Reducing Privacy Leakage in Split Learning through Representation Exposure Control
 
-<p style="color: red;"><strong>AEC evaluation environment:</strong> SSH connection information and a temporary password for the preconfigured artifact environment are provided privately through ACSAC HotCRP.</p>
+### ⚠️ Artifact Evaluation Environment
+
+SSH connection information and a temporary password for the preconfigured artifact environment are provided privately through ACSAC HotCRP. All required datasets and model checkpoints are preloaded on the server, so no additional downloads are required.
 
 ![Status](https://img.shields.io/badge/Status-ACSAC%202026-brightgreen)
 ![Python](https://img.shields.io/badge/Python-3.14.4-blue.svg)
