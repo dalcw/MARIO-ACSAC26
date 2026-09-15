@@ -130,7 +130,20 @@ Release checkpoints are hosted externally because the complete weights are about
 | CelebA and ablation | [Download](https://drive.google.com/file/d/1bugPnLma3U6bQ2s2HxqawJiEIX6mQS82/view?usp=sharing) | `2f75fcbc81719acd6f93c680f820059a41f116bfbe9e0f90568549d912bb5e92` |
 | NIH Chest X-ray | [Download](https://drive.google.com/file/d/1-ODFUJp8bt696dfhDHLkMKO1HrFaisXB/view?usp=sharing) | `45be6f33f58c7276d300f71c6927a175106e92645bd09c315717b64d7d68585d` |
 
-Follow [`artifact/checkpoints/README.md`](artifact/checkpoints/README.md) for archive extraction, the required directory layout, and checksums. Then verify the weights and core environment:
+Save the downloaded archives under `artifact/checkpoint_archives/`. Then run
+the following commands from the repository root to extract them into
+`artifact/checkpoints/release/`:
+
+```bash
+mkdir -p artifact/checkpoint_archives artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-cifar10-checkpoints.tar.gz -C artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-celeba-checkpoints.tar.gz -C artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-nih-checkpoints.tar.gz -C artifact/checkpoints/release
+```
+
+Follow [`artifact/checkpoints/README.md`](artifact/checkpoints/README.md) for the
+resulting directory layout and checksums. Then verify the weights and core
+environment:
 
 ```bash
 python artifact/scripts/verify_checkpoint_hashes.py
@@ -143,7 +156,7 @@ Every experiment uses repository-local `artifact/data/` by default. CIFAR-10 is 
 
 | Dataset | Official page | Download used | Required local path |
 | --- | --- | --- | --- |
-| CIFAR-10 | [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) | Automatic via torchvision | `artifact/data/cifar-10-batches-py/` |
+| CIFAR-10 | [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html) | Automatically downloaded via torchvision when Claim 1, 3, or 5 is first run | `artifact/data/cifar-10-batches-py/` |
 | CelebA | [CelebA project](https://mmlab.ie.cuhk.edu.hk/projects/CelebA.html) | [Kaggle CSV package](https://www.kaggle.com/datasets/jessicali9530/celeba-dataset) | `artifact/data/celeba/` |
 | NIH ChestXray14 | [NIH release](https://nihcc.app.box.com/v/ChestXray-NIHCC) | [Kaggle 224x224 package](https://www.kaggle.com/datasets/khanfashee/nih-chest-x-ray-14-224x224-resized) | `artifact/data/nih_chest_xray/` |
 

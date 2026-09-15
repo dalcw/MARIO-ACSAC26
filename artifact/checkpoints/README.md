@@ -6,13 +6,14 @@ Download the checkpoint archives listed in the top-level [`README.md`](../../REA
 
 ## Extract
 
-Extract each downloaded archive into `artifact/checkpoints/release/` from the repository root:
+Save the downloaded archives under `artifact/checkpoint_archives/`. From the
+repository root, extract them into `artifact/checkpoints/release/`:
 
 ```bash
-mkdir -p artifact/checkpoints/release
-tar -xzf /path/to/mario-cifar10-checkpoints.tar.gz -C artifact/checkpoints/release
-tar -xzf /path/to/mario-celeba-checkpoints.tar.gz -C artifact/checkpoints/release
-tar -xzf /path/to/mario-nih-checkpoints.tar.gz -C artifact/checkpoints/release
+mkdir -p artifact/checkpoint_archives artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-cifar10-checkpoints.tar.gz -C artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-celeba-checkpoints.tar.gz -C artifact/checkpoints/release
+tar -xzf artifact/checkpoint_archives/mario-nih-checkpoints.tar.gz -C artifact/checkpoints/release
 ```
 
 The resulting directory structure is:

@@ -5,10 +5,11 @@ Datasets are placed under `artifact/data/` by default. Use `--data-root /path/to
 ## CIFAR-10
 
 - **Official page:** [CIFAR-10](https://www.cs.toronto.edu/~kriz/cifar.html)
-- **Download:** automatic through torchvision
+- **Download:** automatic through torchvision when Claim 1, 3, or 5 is first run
 - **Path:** `artifact/data/cifar-10-batches-py/`
 
-No manual preparation is required. The experiment scripts enable `--download-cifar10`.
+No manual preparation is required. The corresponding experiment scripts enable
+`--download-cifar10` and reuse the downloaded files on subsequent runs.
 
 ## CelebA
 

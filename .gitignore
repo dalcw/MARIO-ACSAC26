@@ -4,7 +4,8 @@ __pycache__/
 .DS_Store
 
 # Local datasets (CIFAR-10, CelebA, and NIH Chest X-ray)
-/artifact/data/
+/artifact/data/*
+!/artifact/data/.gitkeep
 
 # Generated experiment artifacts at any directory depth
 generated_results/
