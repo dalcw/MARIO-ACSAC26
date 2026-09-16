@@ -2,7 +2,7 @@
 
 ### ⚠️ Artifact Evaluation Environment
 
-SSH connection information and a temporary password for the preconfigured artifact environment are provided privately through ACSAC HotCRP. Conda, the `mario` environment, all required datasets, and model checkpoints are preloaded on the server, so no installation or additional downloads are required.
+SSH connection information and a temporary password for the preconfigured artifact environment are provided privately through ACSAC HotCRP. Conda, the CUDA-capable NVIDIA environment, the `mario` environment, all required datasets, and model checkpoints are preloaded on the server, so no installation or additional downloads are required.
 
 To start an evaluation session on the provided server:
 
@@ -77,8 +77,11 @@ Each claim contains `claim.md`, `run.sh`, and `expected/metrics.csv`. The implem
 ## Setup
 
 A Conda distribution must be installed and `conda` must be available in the
-shell before running the setup script. For the first local setup, create the
-`mario` environment and activate it:
+shell before running the setup script. A CUDA-capable NVIDIA GPU and a compatible
+NVIDIA driver must also be available. The PyTorch CUDA runtime is installed by
+the environment, so a separate system-wide CUDA Toolkit installation is not
+required. For the first local setup, create the `mario` environment and activate
+it:
 
 ```bash
 ./install.sh
