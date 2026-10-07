@@ -1,5 +1,9 @@
 # *MARIO*: Multi-stage Adapter for Reducing Privacy Leakage in Split Learning through Representation Exposure Control
 
+### ⚠️ Update Log
+
+- **2026-10-07:** Clarified execution requirements, minimal check runtime, and output validation instructions.
+
 ### ⚠️ Artifact Evaluation Environment
 
 SSH connection information and a temporary password for the preconfigured artifact environment are provided privately through ACSAC HotCRP. Conda, the CUDA-capable NVIDIA environment, the `mario` environment, all required datasets, and model checkpoints are preloaded on the server, so no installation or additional downloads are required.
@@ -32,8 +36,6 @@ See [Infrastructure Access](infrastructure/access.md) for the server workflow.
 > In ACSAC 2026<br>
 
 > **(Abstract)** Split learning enables collaborative training without sharing raw inputs, but intermediate representations (i.e., smashed data) can still leak structural and semantic information about the original input. Existing privacy mechanisms attempt to mitigate this leakage through perturbation, regularization, or suppression of representations, but often degrade task utility or fail to sufficiently reduce exploitable information. This paper presents MARIO, a lightweight client-side adapter for representation-level exposure control in split learning. Rather than perturbing smashed data as a whole, MARIO regulates what information remains exposed to the server through a three-stage pipeline consisting of channel obfuscation, latent-space decomposition, and variational sampling. Together, these mechanisms suppress reconstruction-related cues, reduce unnecessary information exposure, and weaken stable input--representation associations exploitable for reconstruction and property inference attacks. Evaluations on natural, facial, and medical image datasets show that MARIO consistently reduces reconstruction and property-inference leakage while maintaining competitive task accuracy and practical runtime overhead. These results suggest that privacy in split learning can be improved by explicitly controlling information exposure through intermediate representations.
-
-> **Paper link**: [...]
 
 
 ## Repository Layout
@@ -100,14 +102,19 @@ conda activate mario
 - CPU: 2x Intel Xeon Gold 6326 (64 logical CPUs total)
 - System memory: 125 GiB
 - GPU: 2x NVIDIA RTX PRO 6000 Blackwell Max-Q (96 GB each)
+- Storage: 2 TB
 - NVIDIA driver: 580.173.02
 - Python: 3.14.4
 - PyTorch / torchvision: 2.11.0+cu130 / 0.26.0+cu130
 - CUDA runtime: 13.0
+- Additional requirements: No GUI, API keys, or paid services are required. Internet access is needed for installation and initial downloads.
 
-**24 GB evaluation support**
+**Evaluation requirements**
 
 - Scope: checkpoint-based Experiments 1-5
+- GPU memory: Approximately 24 GB
+- System memory: 32 GB or more recommended
+- Storage: Sufficient space for datasets, approximately 12 GB of checkpoints, and generated results
 - Configuration: memory-conscious batches supplied by each `run.sh`
 - Exclusion: scratch training may require a smaller batch or more memory
 - Details: [`docs/RUNTIME.md`](docs/RUNTIME.md)
@@ -120,7 +127,7 @@ Every experiment launcher accepts `--batch-size`. If an OOM error occurs, rerun 
 ./claims/claimN/run.sh --batch-size 16
 ```
 
-Replace `[experiment name]` with the target experiment directory. Continue halving the value if necessary. Reducing the batch size does not reduce the number of evaluated samples. See [`docs/RUNTIME.md`](docs/RUNTIME.md) for per-experiment values.
+Replace N with the target claim number (1-5). Continue halving the value if necessary. Reducing the batch size does not reduce the number of evaluated samples. See [`docs/RUNTIME.md`](docs/RUNTIME.md) for per-experiment values.
 
 ## Checkpoints
 
@@ -152,6 +159,7 @@ environment:
 python artifact/scripts/verify_checkpoint_hashes.py
 python artifact/scripts/check_setup.py
 ```
+The minimal check (`check_setup.py`) takes approximately 5 seconds after environment setup and checkpoint preparation.
 
 ## Datasets
 
@@ -233,11 +241,7 @@ Released attacker checkpoints are used by default. Reconstruction and property a
 
 ### Outputs
 
-Generated files are written under `claims/claimN/results/`. Reference CSV files
-are under `claims/claimN/expected/metrics.csv`. Stochastic defenses and optimized probes
-may vary slightly across GPU and library versions, so validation should compare
-rounded values and the reported direction of each result rather than require
-bitwise-identical floats.
+Generated files are written under `claims/claimN/results/`. Reference CSV files are under `claims/claimN/expected/metrics.csv`. At completion, each claim script prints the expected values, observed results, and their differences. A claim is considered reproduced when the observed results are consistent with the reference values and satisfy the validation criteria in `claims/claimN/claim.md`. Stochastic defenses and optimized probes may vary across GPU and library versions, so compare rounded values and the reported direction of each result rather than require bitwise-identical floats. See [Expected Results](docs/EXPECTED_RESULTS.md) for further guidance.
 
 <br>
 
